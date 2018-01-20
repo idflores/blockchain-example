@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-example",
+  "version": "0.1.0",
+  "description": "An example implementation of blockchain technology in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker run blockchainexample",
+    "test": "echo \"No tests currently configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idflores/blockchain-example.git"
+  },
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "Israel Flores <https://github.com/idflores>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idflores/blockchain-example/issues"
+  },
+  "homepage": "https://github.com/idflores/blockchain-example#readme"
+}
