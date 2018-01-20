@@ -1,10 +1,12 @@
 FROM node:carbon
 MAINTAINER Israel Flores <https://github.com/idflores>
 
-WORKDIR /src
+WORKDIR /app
 
-ADD . /src
+ADD . /app
 
 RUN npm install
+
+EXPOSE 443
 
 CMD ["node", "index.js"]

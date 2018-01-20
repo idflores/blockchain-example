@@ -4,7 +4,8 @@
   "description": "An example implementation of blockchain technology in NodeJS",
   "main": "index.js",
   "scripts": {
-    "start": "docker run blockchainexample",
+    "start": "docker run -d -p 443:443 blockchainexample",
+    "dev": "docker build --rm -t blockchainexample . && docker run -p 443:443 blockchainexample && docker rmi -f $(docker images --filter \"dangling=true\" -q --no-trunc)",
     "test": "echo \"No tests currently configured\""
   },
   "repository": {
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/idflores/blockchain-example/issues"
   },
-  "homepage": "https://github.com/idflores/blockchain-example#readme"
+  "homepage": "https://github.com/idflores/blockchain-example#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
 }
