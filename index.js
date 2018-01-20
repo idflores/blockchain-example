@@ -18,6 +18,9 @@ https.createServer(app).listen(PORT, function () {
   console.log("blockchain instance running...")
 })
 
+// instantiate the genesisBlock
+// TODO: instantiate the genesis block only if a blockchain cannot be polled
+
 // create instance of the blockchain
-var Block = require('./src/block.js')
-console.log(new Block(2, 0, 0))
+var Block = require('./lib/block.js')
+console.log(new Block(2, 0, "YAY DATA!", 0))
