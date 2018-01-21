@@ -1,6 +1,6 @@
 /*
 Author:     Israel Flores (https://github.com/idflores)
-File:       /index.js
+File:       /app.js
 Purpose:    boots the server creating an instance of the blockchain client
 */
 

@@ -9,4 +9,4 @@ RUN npm install
 
 EXPOSE 443
 
-CMD ["node", "index.js"]
+CMD ["node", "app.js"]
