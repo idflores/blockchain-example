@@ -6,10 +6,13 @@ Purpose:    boots the server creating an instance of the blockchain client
 
 const app = (require('express'))()
 const bodyParser = require('body-parser')
+const chalk = require('chalk')
 const fs = require('fs')
 const https = require('https')
 const path = require('path')
 const WebSocket = require('ws')
+
+const p2p = require('./lib/p2p/client.js')
 
 const PORT = 443
 
@@ -26,12 +29,16 @@ for (var i = 0; i < routes.length ; i++) {
   }
 }
 
-// boot the server
+// create the server instance and attach a WebSocket server instance
 var server = https.createServer(app)
 var wsServer = new WebSocket.Server({ server: server })
 
+// configure the WebSocket server
+p2p(wsServer)
+
+// boot the server
 server.listen(PORT, function () {
-  console.log("blockchain instance running...")
+  console.log(chalk.green("Blockchain HTTPS Server running..."))
 })
 
 // instantiate the genesisBlock

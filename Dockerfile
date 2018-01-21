@@ -9,4 +9,4 @@ RUN npm install
 
 EXPOSE 443
 
-CMD ["node", "app.js"]
+CMD FORCE_COLOR=1 node app.js
