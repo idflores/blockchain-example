@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "docker run -d -p 443:443 blockchainexample",
-    "dev": "docker rmi -f $(docker images --filter \"dangling=true\" -q --no-trunc) && docker build --rm -t blockchainexample . && docker run -p 443:443 blockchainexample",
+    "dev": "docker build --rm -t blockchainexample . && docker rmi -f $(docker images --filter \"dangling=true\" -q --no-trunc) && docker run -p 443:443 blockchainexample",
     "test": "echo \"No tests currently configured\""
   },
   "repository": {

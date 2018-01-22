@@ -3,6 +3,8 @@
 ## Features
 Uses `sha256` for hash identities of the blocks which can be found [here]().
 
+The WebSocket and ExpressJS HTTPS server packages are implemented but not used during the demo execution of `run.js` in `/lib` given that this project is for example purposes.
+
 ## Analysis
 ### Block and Blockchain Defined
 ### The Proof-of-Work Puzzle

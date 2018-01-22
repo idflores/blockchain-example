@@ -12,6 +12,7 @@ const https = require('https')
 const path = require('path')
 const WebSocket = require('ws')
 
+const startApp = require('./lib/run.js')
 const p2p = require('./lib/p2p/server.js')
 
 const PORT = 443
@@ -37,9 +38,14 @@ var wsServer = new WebSocket.Server({ server: server })
 p2p(wsServer)
 
 // boot the server
-server.listen(PORT, function () {
-  console.log(chalk.green("Blockchain HTTPS Server running..."))
+new Promise((resolve, reject) => {
+  server.listen(PORT, function () {
+    console.log(chalk.green("Blockchain HTTPS Server running..."))
+    resolve()
+  })
 })
+.then(() => { startApp() })
+.catch(err => { console.error(chalk.red(err.stack)) })
 
 // instantiate the genesisBlock
 // TODO: instantiate the genesis block only if a blockchain cannot be polled
