@@ -12,7 +12,7 @@ const https = require('https')
 const path = require('path')
 const WebSocket = require('ws')
 
-const p2p = require('./lib/p2p/client.js')
+const p2p = require('./lib/p2p/server.js')
 
 const PORT = 443
 
