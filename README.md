@@ -10,8 +10,9 @@ I wanted to expand my professional career and found immense potential in the Blo
 ### Prerequisite
 Make sure you have [Docker](https://www.docker.com/community-edition) installed.
 ### Install
-Clone the source and perform:
+Clone the source and perform the following in the project directory:
 ```bash
+npm install
 npm start
 ```
 ### Stop
